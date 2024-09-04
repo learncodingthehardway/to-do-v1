@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sidebar">
+    <div class="to-do-app-title">To Do App Odin</div>
+    <div id="all-tasks" class="sidebar-tasks">
+        <img src="./assets/all.png" alt="all tasks">
+        <div class="sidebar-tasks-heading">All Tasks</div>
+    </div>
+    <div id="today-tasks" class="sidebar-tasks">
+        <img src="./assets/today.png" alt="all tasks">
+        <div class="sidebar-tasks-heading">Today</div>
+    </div>
+    <div class="projects-divider">
+        <span class="projects-heading">Projects</span>
+        <button id="open-projects-dialog-button">
+            <img src="./assets/add.png" alt="add project">
+        </button>    
+    </div>
+    <ul class="projects-list" id="data-lists">
+    </ul>
+    
+    <dialog id="projects-dialog">
+        <form action="" id="projects-form">
+            <input
+            type="text"
+            class="new list"
+            id="project-input"
+            placeholder="new list name"
+            aria-label="new list name"
+            >
+            <button type="submit" class="btn-create" aria-label="create new list">+</button>
+            <button id="close-projects-dialog-button">Close</button>
+    </dialog>
+        <button class="btn-delete" aria-label="Delete List" id="project-delete-button">Delete List</button>
+    </form>
+</div>
+
+ <div class="to-do-list" id="list-display-container">
+    <div class="to-do-heading">
+        <h2 class="list-title" id="to-do-list-title">All To Do's</h2>
+        <p class="task-count" id="task-count">3 tasks remaining</p>
+    </div>
+
+    <div class="todo-body">
+        <div class="tasks" id="task-list-container">
+        </div>
+    </div>
+    <div class="add-task-cta-container">
+        <button id="open-task-dialog-button">
+            <img src="./assets/add.png" alt="add task">
+            <span class="add-task-cta-text">Add Task</span>
+        </button>
+        <dialog id="task-dialog">
+            <form action="" id="task-form">
+                <div class="task-form-header">Add a new task</div>
+                <input type="text" id="new-task-input" placeholder="Enter a new task here" aria-label="new task name">
+                <button class="btn-create" id="create-task-button" aria-label="create new task">Add New Task</button>
+            </form>
+            <button id="close-dialog-button">Close</button>
+        </dialog>
+    </div>
+    <div class="edit-task-dialog-container">
+        <dialog id="edit-task-dialog">
+            <form action="" id="edit-task-form">
+                <div class="edit-task-form-header">Edit Task</div>
+                <input type="text" id="edit-task-input" placeholder="Enter a new task here" aria-label="new task name">
+                <button type="submit" class="btn-create" id="edit-task-button" aria-label="create new task">Edit Task</button>
+            </form>
+            <button id="close-edit-dialog-button">Close</button>
+        </dialog>
+    </div>
+</div>
+
+</body>
+</html>

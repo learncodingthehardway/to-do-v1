@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: system-ui;
+    box-sizing: border-box;
+    border: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    height: 100vh;
+    background-color: white;
+}
+
+.sidebar {
+    background-color: #e4e4e7;
+    padding: 20px;
+}
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+input[type="text"] {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#list-display-container {
+justify-self: center;
+margin-top: 20px;
+}
+
+.task-list-item {
+    list-style: none;
+    font-size: 20px;
+}
+
+#to-do-list-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    min-width: 50vw;
+    justify-content: space-between;
+}
+
+.project-list-item {
+    font-size: 20px;
+}
+
+.sidebar-tasks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.projects-divider {
+margin-top: 40px;
+margin-bottom: 20px;
+display: flex;
+justify-content: space-between;
+}
+.projects-heading {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#task-dialog, #projects-dialog, #edit-task-dialog {
+    position: fixed; /* Ensure the dialog is positioned relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the dialog */
+    background-color: white; /* Background color for the dialog */
+    padding: 20px; /* Padding inside the dialog */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
+    z-index: 1000; /* Ensure the dialog is above other elements */
+}
+
+
+.task-container label {
+    display: flex;
+    align-items: center;
+}
+
+.task-container input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    display: none;
+}
+
+.to-do-app-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#open-projects-dialog-button, #open-task-dialog-button, #delete-task-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-task-cta-container {
+    margin-top: 50px;
+}
+
+.add-task-cta-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.delete-task-button, .edit-task-button {
+    border: none;
+    background: none;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-box {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox-box-checked {
+    background-color: green;
+}
+
+.task-item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
