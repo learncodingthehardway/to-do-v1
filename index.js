@@ -23,6 +23,7 @@ const toDoListContainer = document.getElementById("task-list-container")
 const deleteTaskButton = document.getElementById("delete-task-button")
 const projectSelect = document.getElementById("project-select")
 const allTasks = document.getElementById("all-tasks")
+
 //Elements related to the to-do list container
 const toDoListHeading = document.getElementById("to-do-list-title")
 const taskCount = document.getElementById("task-count")
@@ -64,7 +65,6 @@ function saveTaskId() {
     localStorage.setItem(LOCAL_STORAGE_TASK_ID_KEY, taskId)
 }
 
-
 //Saving a new task to the taskList
 toDoListForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -84,7 +84,6 @@ toDoListForm.addEventListener("submit", (e) => {
 function createTask(taskName) {
     return {name: taskName, id: Date.now().toString(), isDone: false, projectId: projectId}
 }
-
 
 function getFilteredTasks() {
     return taskList.filter(task => task.projectId === projectId)
@@ -154,8 +153,6 @@ function renderTasks(tasks) {
         const editTaskButtonImage = document.createElement("img")
         editTaskButtonImage.src = "./assets/edit.png"
         editTaskButtonImage.alt = "edit task"
-
-
 
         const controlsContainer = document.createElement("div")
         controlsContainer.classList.add("controls-container")
@@ -314,4 +311,27 @@ renderTaskCount()
 document.addEventListener("DOMContentLoaded", () => {
     projectId = null;
 });
+
+projectSelect.addEventListener("click", () => {
+    projectSelect.innerHTML = ""
+
+    projectList.forEach(project => {
+        const projectListItem = document.createElement("option")
+        projectListItem.value = project.id
+        projectListItem.textContent = project.name
+        projectSelect.appendChild(projectListItem)
+    })
+})
+
+
+
+//To Do-s
+//Add additional parameters to task object: due date, priority, description, project selection
+//Style the task adding dialog window
+//Import data fns to the project and use it for dates
+
+//Style the project dialog window
+
+//Add additional parameters to project object: color
+//Add functionality to edit project
 

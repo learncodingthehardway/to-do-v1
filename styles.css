@@ -30,7 +30,7 @@ input[type="text"] {
     background-color: white;
     color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 0px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
@@ -155,4 +155,75 @@ justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/* Dialog Windows Styling */
+
+#task-dialog, #projects-dialog, #edit-task-dialog {
+    border-radius: 10px;
+    min-width: 40vw;
+}
+
+.task-form-header, .edit-task-form-header {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+#project-select {
+    max-width: 100px;
+}
+
+#new-task-input {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    outline: none;
+}
+
+#new-task-input::placeholder, #edit-task-input::placeholder {
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+.divider {
+    height: 2px;
+    border: 1px solid grey;
+    margin: 20px 0px;
+}
+
+.task-dialog-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-dialog-button, #close-edit-dialog-button {
+    background-color: #e4e4e7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-create {
+background-color: #3b82f6;
+color: white;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+cursor: pointer;
+margin-left: 10px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0,0,0,.6);
+}
+
+textarea {
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+    min-height: 100px;
 }

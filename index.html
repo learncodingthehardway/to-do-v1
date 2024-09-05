@@ -61,19 +61,54 @@
         </button>
         <dialog id="task-dialog">
             <form action="" id="task-form">
-                <div class="task-form-header">Add a new task</div>
+                <select name="project-select" id="project-select" placeholder="Project">
+                    <option value="Project" disabled selected>Project</option>
+                </select>
                 <input type="text" id="new-task-input" placeholder="Enter a new task here" aria-label="new task name">
-                <button class="btn-create" id="create-task-button" aria-label="create new task">Add New Task</button>
+                <textarea name="task-description" id="task-description" placeholder="Task Description"></textarea>
+                
+                <div class="options-container">
+                    <input type="date" id="task-due-date" placeholder="Due Date">
+                    <select name="task-priority" id="task-priority">
+                        <option value="No Priority" disabled selected>No Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <div class="task-dialog-buttons-container">
+                    <button id="close-dialog-button">Close</button>
+                    <button class="btn-create" id="create-task-button" aria-label="create new task">Add New Task</button>
+                </div>
+                
             </form>
-            <button id="close-dialog-button">Close</button>
         </dialog>
     </div>
     <div class="edit-task-dialog-container">
         <dialog id="edit-task-dialog">
             <form action="" id="edit-task-form">
-                <div class="edit-task-form-header">Edit Task</div>
-                <input type="text" id="edit-task-input" placeholder="Enter a new task here" aria-label="new task name">
-                <button type="submit" class="btn-create" id="edit-task-button" aria-label="create new task">Edit Task</button>
+                <select name="project-select" id="project-select" placeholder="Project">
+                    <option value="Project" disabled selected>Project</option>
+                </select>
+                <input type="text" id="new-task-input" placeholder="Enter a new task here" aria-label="new task name">
+                <textarea name="task-description" id="task-description" placeholder="Task Description"></textarea>
+                
+                <div class="options-container">
+                    <input type="date" id="task-due-date" placeholder="Due Date">
+                    <select name="task-priority" id="task-priority">
+                        <option value="No Priority" disabled selected>No Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                <div class="task-dialog-buttons-container">
+                    <input type="text" id="edit-task-input" placeholder="Enter a new task here" aria-label="new task name">
+                    <button type="submit" class="btn-create" id="edit-task-button" aria-label="create new task">Edit Task</button>
+                </div>
+                
             </form>
             <button id="close-edit-dialog-button">Close</button>
         </dialog>
